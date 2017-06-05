@@ -9,7 +9,50 @@ en:
     home: 
       home: "Home"
       fdf: "Food and Drinks"
-
+      welcome: "Welcome to the Food and Drinks"
+      this: "This is the home page for the"
+      signup: "Enjoy now!"
+      open: "Opening Hours"
+      brf: "Breakfast:"
+      t1: "8AM - 11AM"
+      gm: "Grill Menu:"
+      t2: "12AM - 12PM"
+      lm: "Live Musiс:"
+      t3: "8AM - 11AM"
+    contact:
+      contact: "Contact"
+      fdf: "Food and Drinks"
+    news:
+      news: "News"
+    products:
+      products: "Products"
+  users:
+    new:
+      signup: "Sign up"
+      email: "example@email.com"
+      fullname: "Full name"
+      password: "6 to 72 characters"
+      confirm: "Confirmation"
+      create: "Create account"
+      login: "Sign in"
+      already: "Already have an account?"
+      title: "Create your Food and Drinks account"
+      or: "or"
   layouts:
     application:
       title: "Food and Drinks"
+  footer:
+    login: "Log in"
+    the: "2017"
+    cb: "Code by"
+    son: "Phu Son"
+    fdf: "Food and Drinks"
+  signup:
+    signup: "Sign up now!"
+  shared:
+    error_messages:
+      theform: "The form contains"
+      errors: "error"
+  users_controller:
+    welcome: "Welcome to Food and Drinks Page!"
+    not_found: "Not found user."
