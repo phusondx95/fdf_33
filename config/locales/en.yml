@@ -1,0 +1,15 @@
+en: 
+  static_pages:
+    about:
+      about: "About"
+      fdf: "Food and Drinks"
+    help: 
+      help: "Help"
+      fdf: "Food and Drinks"
+    home: 
+      home: "Home"
+      fdf: "Food and Drinks"
+
+  layouts:
+    application:
+      title: "Food and Drinks"
