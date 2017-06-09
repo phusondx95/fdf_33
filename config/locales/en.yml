@@ -28,6 +28,7 @@ en:
       products: "Products"
   users:
     new:
+      new:
       signup: "Sign up"
       email: "example@email.com"
       fullname: "Full name"
@@ -36,6 +37,8 @@ en:
       create: "Create account"
       login: "Sign in"
       already: "Already have an account?"
+      title: "Create your Food and Drinks account"
+      or: "or"
   layouts:
     application:
       title: "Food and Drinks"
@@ -51,7 +54,19 @@ en:
     error_messages:
       theform: "The form contains"
       errors: "error"
+  users_controller:
+    welcome: "Welcome to Food and Drinks Page!"
+    not_found: "Not found user."
   sessions:
     new:
       login: "Log in"
       dont: "Don't have an account?"
+  sessions_controller:
+    invalid: "Invalid email/password combination"
+  header:
+    account: "Account"
+    pro: "Profile"
+    setting: "Settings"
+    logout: "Log out"
+    user: "Users"
+    

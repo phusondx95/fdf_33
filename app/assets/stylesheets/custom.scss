@@ -5,9 +5,9 @@
 @import "bootstrap-social";
 
 @mixin box_sizing {
-  -moz-box-sizing:    border-box;
+  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  box-sizing:         border-box;
+  box-sizing: border-box;
 }
 
 /* universal */
@@ -270,7 +270,7 @@ input {
   height: auto !important;
 }
 
-#error_explanation {
+.error_explanation {
   color: red;
   ul {
     color: red;
@@ -283,4 +283,10 @@ input {
   .form-control {
     color: $state-danger-text;
   }
+}
+
+.or {
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
 }

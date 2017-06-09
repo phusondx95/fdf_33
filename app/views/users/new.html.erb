@@ -1,5 +1,5 @@
 <% provide :title, t(".signup") %>
-<h1>Create your Food and Drinks account</h1>
+<h1><%= t ".title" %></h1>
 
 <div class="row">
   <div class="socials">
@@ -8,7 +8,7 @@
     <a href="#" class="fa fa-google-plus"></a>
   </div>
 
-  <h2 style="color: black;font-weight: bold;font-size: 30px;"> or </h2>
+  <h2 class="or"> <%= t ".or" %> </h2>
   
   <div class="col-md-6 col-md-offset-3">
     <%= form_for @user, url: signup_path do |f| %>

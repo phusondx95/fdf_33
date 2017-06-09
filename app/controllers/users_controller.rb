@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
-
   def show
-  	@user = User.find(params[:id])
+    @user = User.find_by params[:id]
+    return if @user
+    flash[:danger] = t ".not_found"
+    redirect_to users_path
   end
 
   def new
@@ -9,19 +11,19 @@ class UsersController < ApplicationController
   end
 
   def create
-  	@user = User.new(user_params)
+    @user = User.new user_params
     if @user.save
       log_in @user
-      flash[:success] = "Welcome to Food and Drinks Page!"
+      flash[:success] = t "users_controller.welcome"
       redirect_to @user
     else
-      render "new"
+      render :new
     end
   end
 
   private
 
-    def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation)
-    end
+  def user_params
+    params.require(:user).permit :name, :email, :password, :password_confirmation
+  end
 end
