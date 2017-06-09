@@ -1,0 +1,6 @@
+max_name: 50
+max_email: 250
+min_password: 6
+max_title: 50
+max_description: 150
+min_price: 5000
