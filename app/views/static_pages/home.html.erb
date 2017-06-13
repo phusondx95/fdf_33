@@ -1,5 +1,14 @@
-<% provide :title, t(".home") %>
-<h1><%= t(".fdf") %> |<%= t(".home") %></h1>
-<p>
-  <%= t(".home") %>
-</p>
+<div class="center jumbotron">
+  <h1><%= t ".welcome" %></h1>
+
+  <%= link_to t(".signup"), "#", class: "btn btn-lg btn-primary" %>
+</div>
+
+<div class="grid_4">
+  <h2><%= t ".open" %></h2>
+  <ul class="shed">
+    <li><span><%= t ".brf" %></span> <%= t ".t1" %></li>
+    <li><span><%= t ".gm" %></span> <%= t ".t2" %></li>
+    <li><span><%= t ".lm" %></span> <%= t ".t3" %></li>
+  </ul>
+</div>
