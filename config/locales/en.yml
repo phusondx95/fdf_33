@@ -39,6 +39,9 @@ en:
       already: "Already have an account?"
       title: "Create your Food and Drinks account"
       or: "or"
+    edit:
+      edit: "Update user"
+      save: "Save"
   layouts:
     application:
       title: "Food and Drinks"
@@ -57,6 +60,8 @@ en:
   users_controller:
     welcome: "Welcome to Food and Drinks Page!"
     not_found: "Not found user."
+    updated: "Profile updated!"
+    login: "Please login!"
   sessions:
     new:
       login: "Log in"
