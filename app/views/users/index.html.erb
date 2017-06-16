@@ -1,0 +1,19 @@
+<% provide :title, t(".user") %>
+
+<div class="container">
+  <h2 class="title"><%= t ".title" %></h2>
+  <table id="cart" class="table table-hover table-condensed">
+    <thead>
+      <tr>
+        <th class="th1"><%= t ".user" %></th>
+        <th class="th2"><%= t ".function" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @users %>
+    </tbody>
+    <tfoot>
+      <%= will_paginate @users %>
+    </tfoot>
+  </table>
+</div>

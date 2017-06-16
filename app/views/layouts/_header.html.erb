@@ -3,29 +3,57 @@
   <%= link_to t("layouts.application.title"), root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to t("static-pages.home.home"), root_path %></li>
-        <li><%= link_to t("static-pages.news.news"), "#" %></li>
-        <li><%= link_to t("static-pages.products.products"), "#" %></li>
-        <li><%= link_to t("static-pages.about.about"), about_path %></li>
-        <li><%= link_to t("static-pages.contact.contact"), contact_path %></li>
+        <li><%= link_to t("static-pages.home.home"), root_path, 
+          class: "glyphicon glyphicon-home" %></li>
+        <li><%= link_to t("static-pages.news.news"), "#", class: "glyphicon glyphicon-new" %>
+          </li>
         <% if logged_in? %>
-          <li><%= link_to t("header.user"), "#" %></li>
+          <% if current_user.is_admin %>
+            <li><%= link_to t("static-pages.products.products"), "#", 
+              class: "glyphicon glyphicon-modal-window" %></li>
+            <li><%= link_to t("header.user"), users_path, class: "glyphicon glyphicon-user" %></li>
+          <% else %>
+            <li><%= link_to t("static-pages.products.products"), "#", 
+              class: "glyphicon glyphicon-modal-window" %></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="glyphicon glyphicon-shopping-cart"></span><%= t "header.cart" %>
+                <span class="badge"><%= t "header.0" %></span></a>
+              <div class="dropdown-menu" style="width: 400px;">
+                <div class="panel panel-succes">
+                  <div class="panel-heading">
+                    <div class="row">
+                      <div class="col-md-3"><%= t "header.s1" %></div>
+                      <div class="col-md-3"><%= t "header.image" %></div>
+                      <div class="col-md-3"><%= t "header.name" %></div>
+                      <div class="col-md-3"><%= t "header.price" %></div>
+                    </div>
+                  </div>
+                  <div class="panel-body"></div>
+                  <div class="panel-footer"></div>
+                </div>
+              </div>
+            </li>
+          <% end %>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <%= t "header.account" %> <b class="caret"></b>
+              <%= @current_user.name %> <b class="caret"></b>
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu">  
               <li><%= link_to t("header.pro"), current_user %></li>
               <li><%= link_to t("header.setting"), edit_user_path(current_user) %></li>
               <li class="divider"></li>
               <li>
                 <%= link_to t("header.logout"), logout_path, method: :delete %>
-              </li>
-            </ul>
-          </li>
-        <% else %>
-          <li><%= link_to t(".login"), login_path %></li>
-          <li><%= link_to t("signup.signup"), signup_path, class: "signup" %></li>
+                </li>
+              </ul>
+            </li>
+          <% else %>
+          <li><%= link_to t("static-pages.products.products"), "#", 
+            class: "glyphicon glyphicon-modal-window" %></li>
+          <li><%= link_to t(".login"), login_path, class: "glyphicon glyphicon-user" %></li>
+          <li><%= link_to t("signup.signup"), signup_path, class: "signup", 
+            class: "glyphicon glyphicon-user" %></li>
         <% end %>
       </ul>
     </nav>
