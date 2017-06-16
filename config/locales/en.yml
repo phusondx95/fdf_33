@@ -42,6 +42,13 @@ en:
     edit:
       edit: "Update user"
       save: "Save"
+    index:
+      user: "Users"
+      title: "List Users"
+      function: "Function"
+    user:
+      delete: "Delete"
+      are: "Are you sure?"
   layouts:
     application:
       title: "Food and Drinks"
@@ -62,6 +69,7 @@ en:
     not_found: "Not found user."
     updated: "Profile updated!"
     login: "Please login!"
+    des: "User deleted"
   sessions:
     new:
       login: "Log in"
@@ -74,3 +82,9 @@ en:
     setting: "Settings"
     logout: "Log out"
     user: "Users"
+    cart: "Cart"
+    0: "0"
+    s1: "S1.No"
+    image: "Product image"
+    name: "Product name"
+    price: "Price in$"

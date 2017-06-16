@@ -1,0 +1,19 @@
+<tr>
+  <td data-th="Users">
+    <div class="row">
+      <div class="col-sm-2 hidden-xs"><%= gravatar_for user, size: 50 %></div>
+        <div class="col-sm-10">
+          <h4 class="nomargin"><%= link_to user.name, user %></h4>
+          <p><%= link_to user.email, user %></p>
+        </div>
+      </div>
+  </td>
+  <td class="actions" data-th="">
+    <% if current_user.is_admin? && !current_user?(user) %>
+      <%= link_to user, class: "btn btn-danger btn-sm",
+        method: :delete, data: {confirm: t(".are")} do %>
+        <i class="fa fa-trash-o"><%= t ".delete" %></i>
+      <% end %>
+    <% end %>
+  </td>
+</tr>
