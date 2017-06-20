@@ -6,3 +6,4 @@ max_description: 150
 min_price: 5000
 size_avatar: 80
 user_limit: 15
+product_limit: 12

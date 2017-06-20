@@ -13,7 +13,7 @@
               class: "glyphicon glyphicon-modal-window" %></li>
             <li><%= link_to t("header.user"), users_path, class: "glyphicon glyphicon-user" %></li>
           <% else %>
-            <li><%= link_to t("static-pages.products.products"), "#", 
+            <li><%= link_to t("static-pages.products.products"), products_path, 
               class: "glyphicon glyphicon-modal-window" %></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -49,7 +49,7 @@
               </ul>
             </li>
           <% else %>
-          <li><%= link_to t("static-pages.products.products"), "#", 
+          <li><%= link_to t("static-pages.products.products"), products_path, 
             class: "glyphicon glyphicon-modal-window" %></li>
           <li><%= link_to t(".login"), login_path, class: "glyphicon glyphicon-user" %></li>
           <li><%= link_to t("signup.signup"), signup_path, class: "signup", 

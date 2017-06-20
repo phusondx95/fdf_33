@@ -1,0 +1,26 @@
+<div class="panel panel-info">
+  <div class="panel-heading"><%= t ".title" %></div>
+  <div class="panel-body">
+    <% @products.each do |product| %>
+      <div class="col-md-4">
+        <div class="panel panel-info">
+          <div class="panel-heading"><%= link_to product.title %></div> 
+          <div class="panel-body">
+            <img src="" alt="">
+          </div>
+          <div class="panel-heading"><%= number_to_currency product.price, 
+            unit: "VNĐ", separator: ".", delimiter: ",", precision: 0,
+            format: "%n %u" %>
+            <%= link_to "#", class: "btn btn-danger btn-xs" do %>
+              <span class="addcart"><%= t ".button" %></span>
+            <% end %>
+          </div>  
+          <div class="rating">
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>  
+</div>
+
+<%= will_paginate @products %>
