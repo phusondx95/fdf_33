@@ -7,3 +7,4 @@ min_price: 5000
 size_avatar: 80
 user_limit: 15
 product_limit: 12
+category_limit: 10

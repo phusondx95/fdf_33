@@ -39,7 +39,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-      if @user.destroy
+    if @user.destroy
       flash[:success] = t "users_controller.des"
       redirect_to users_url
     else

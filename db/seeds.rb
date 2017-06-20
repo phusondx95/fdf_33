@@ -17,3 +17,6 @@ end
   Product.create!(title: title, description: description,image_url: image_url,
     price: price, rating: rating)
 end
+
+Category.create!(name: "Food")
+Category.create!(name: "Drink")
