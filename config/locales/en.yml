@@ -88,3 +88,9 @@ en:
     image: "Product image"
     name: "Product name"
     price: "Price in$"
+  products:
+    index:
+      title: "Products"
+    products:
+      button: "Add Cart"
+      title: "Products"

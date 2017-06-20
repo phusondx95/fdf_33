@@ -7,3 +7,13 @@ User.create!(name: "John Son", email: "frankvanphu@gmail.com", password: "123456
   password = "password"
   User.create!(name:  name, email: email, password: password, password_confirmation: password)
 end
+
+50.times do |n|
+  title  = "Product-#{n+1}"
+  description = "description about roduct-#{n+1}"
+  image_url = "product_image-#{n+1}.jpg"
+  price = "#{n+5000}"
+  rating = "#{n+2}"
+  Product.create!(title: title, description: description,image_url: image_url,
+    price: price, rating: rating)
+end
