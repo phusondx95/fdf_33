@@ -88,9 +88,34 @@ en:
     image: "Product image"
     name: "Product name"
     price: "Price in$"
+    categories: "Categories"
+    create: "Create sub category"
   products:
     index:
       title: "Products"
     products:
       button: "Add Cart"
       title: "Products"
+  categories:
+    new:
+      title: "Create sub category"
+      parent: "Parent Category"
+      choose: "Choose category"
+    show:
+      title: "Sub Categories"
+      subcat: "List sub category"
+      name: "Name"
+      func: "Function"
+    sub_category:
+      message: "Are you sure delete this category?"
+    edit:
+      title: "Edit sub category"
+      parent: "Parent Category"
+      save: "Save changes"
+  categories_controller:
+    danger: "Please choose parent category!"
+    success: "Sub category created success!"
+    notfound: "Not found category!"
+    updated: "Category updated success!"
+    delete: "Sub category deleted success!"
+    fail_delete: "Sub category fail delete!"

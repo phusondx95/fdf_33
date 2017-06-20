@@ -1,0 +1,12 @@
+<% if @subcategory.errors.any? %>
+  <div class="error_explanation">
+    <div class="alert alert-danger">
+      <%= t(".theform") %> <%= pluralize(@subcategory.errors.count, t(".errors")) %>.
+    </div>
+    <ul>
+    <% @subcategory.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

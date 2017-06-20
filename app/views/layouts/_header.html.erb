@@ -11,14 +11,41 @@
           <% if current_user.is_admin %>
             <li><%= link_to t("static-pages.products.products"), "#", 
               class: "glyphicon glyphicon-modal-window" %></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="glyphicon glyphicon-categories"></span>
+                  <%= t "header.categories" %>
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <% load_main_category.each do |main_category| %>  
+                  <li>
+                    <%= link_to main_category.name, category_path(main_category) %>
+                  </li>
+                  <li class="divider"></li>
+                <% end %>
+                <li>
+                  <%= link_to new_category_path, class: "btn btn-info btn-sm" do %>
+                    <i class="fa fa-add">
+                      <%= t "header.create" %>
+                    </i>
+                  <% end %>
+                </li>
+              </ul>
+            </li>
             <li><%= link_to t("header.user"), users_path, class: "glyphicon glyphicon-user" %></li>
           <% else %>
             <li><%= link_to t("static-pages.products.products"), products_path, 
               class: "glyphicon glyphicon-modal-window" %></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <span class="glyphicon glyphicon-shopping-cart"></span><%= t "header.cart" %>
-                <span class="badge"><%= t "header.0" %></span></a>
+                <span class="glyphicon glyphicon-shopping-cart">
+                </span>
+                <%= t "header.cart" %>
+                <span class="badge">
+                  <%= t "header.0" %>
+                  </span>
+              </a>
               <div class="dropdown-menu" style="width: 400px;">
                 <div class="panel panel-succes">
                   <div class="panel-heading">
@@ -45,9 +72,9 @@
               <li class="divider"></li>
               <li>
                 <%= link_to t("header.logout"), logout_path, method: :delete %>
-                </li>
-              </ul>
-            </li>
+              </li>
+            </ul>
+          </li>
           <% else %>
           <li><%= link_to t("static-pages.products.products"), products_path, 
             class: "glyphicon glyphicon-modal-window" %></li>
