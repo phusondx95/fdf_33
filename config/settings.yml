@@ -9,3 +9,4 @@ user_limit: 15
 product_limit: 12
 category_limit: 10
 suggest_limit: 10
+order_limit: 10

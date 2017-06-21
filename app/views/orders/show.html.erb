@@ -1,0 +1,15 @@
+<ul>
+  <li>Name: <%= @order.name %></li>
+  <li>Email: <%= @order.email %></li>
+  <li>Pay type:  <%= @order.pay_type %></li>
+  <li>Status: <%= @order.status %></li>
+  <li>Order item:
+    <ul>
+      <% @order.line_items.each do |item| %>
+        <li><%= item.product.title %> X <%= item.quantity %></li>
+      <% end %>
+    </ul>
+  </li>
+  <li>Total cost: <%= number_to_currency(total_cost(@order),
+          unit: "VNĐ", separator: ".", delimiter: ",", precision: 0, format: "%n %u" ) %></li>
+</ul>
