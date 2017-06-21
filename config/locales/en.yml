@@ -64,6 +64,15 @@ en:
     error_messages:
       theform: "The form contains"
       errors: "error"
+    error_categories_messages:
+      theform: "The form contains"
+      errors: "error"
+    error_subcategories_messages:
+      theform: "The form contains"
+      errors: "error"
+    error_suggests_messages:
+      theform: "The form contains"
+      errors: "error"
   users_controller:
     welcome: "Welcome to Food and Drinks Page!"
     not_found: "Not found user."
@@ -90,6 +99,7 @@ en:
     price: "Price in$"
     categories: "Categories"
     create: "Create sub category"
+    suggest: "Manager request"
   products:
     index:
       title: "Products"
@@ -119,3 +129,26 @@ en:
     updated: "Category updated success!"
     delete: "Sub category deleted success!"
     fail_delete: "Sub category fail delete!"
+  suggests_controller:
+    create: "Suggest created success!"
+    delete: "Suggest deleted success!"
+    fail: "Suggest fail delete!"
+    notfound: "Not found suggest!"
+  suggests:
+    new:
+      image: "Image"
+      accept: "image/jpeg,image/gif,image/png"
+      create: "Create suggest"
+    index:
+      manager: "Manager request"
+      title: "List suggest"
+      create: "Create new suggest"
+      product: "Product"
+      price: "Price"
+      status: "Status"
+      func: "Function"
+    suggest:
+      appro: "Approved"
+      not: "Not approved"
+      are: "Are you sure delele this suggest?"
+      delete: "Delete"
