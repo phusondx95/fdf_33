@@ -1,4 +1,5 @@
 module ApplicationHelper
+  include CartOrder
   def full_title page_title
     base_title = t(".title")
     if page_title.empty?

@@ -76,6 +76,9 @@ en:
     error_products_messages:
       theform: "The form contains"
       errors: "error"
+    error_orders_messages:
+      theform: "The form contains"
+      errors: "error"
   users_controller:
     welcome: "Welcome to Food and Drinks Page!"
     not_found: "Not found user."
@@ -103,6 +106,7 @@ en:
     categories: "Categories"
     create: "Create sub category"
     suggest: "Manager request"
+    order: "List order"
   products:
     should: "Should be less than 5MB"
     index:
@@ -188,6 +192,8 @@ en:
   cart_oder:
     not_logged_in: "Not logged in!"
     cart_empty: "Cart empty!"
+    received: "received"
+    shipped: "shipped"
   carts_controller:
     deletes: "Cart deleted success!"
     notfound: "Not found cart!"
@@ -213,3 +219,63 @@ en:
       continue: "Continue Shopping"
       totalc: "Total "
       checkout: "Checkout"
+  orders_controller:
+    submit: "Submitted!"
+    submitf: "Submit failed!"
+    updates: "Order updated success!"
+    shipped: "shipped"
+    updatef: "Update failed!"
+    deletes: "Order deleted success!"
+    deletef: "Order deleted fail!"
+    notfound: "Order not found!"
+  orders:
+    form:
+      create: "Create order"
+      update: "Update order"
+      select: "Select pay type"
+    index:
+      title: "Orders"
+    order_list_index:
+      list: "List order"
+      name: "Name"
+      detail: "Order detail"
+      total: "Total cost"
+      stt: "Status"
+      func: "Function"
+      update: "Update"
+      are: "Are you sure delete this order?"
+    new:
+      fillin: "Fill in the information"
+    show:
+      title: "Detail order"
+      pro: "Product"
+      price: "Price"
+      quantity: "Quantity"
+      sub: "Subtotal"
+      total: "Total"
+  order_mailer:
+    received: "Mail received"
+    shipped: "Mail shipped"
+    canceled: "Mail canceled"
+  order_mailer:
+    canceled:
+      p1: "Thank you for your recent order at fdf_33"
+      p2: "Unfortunately due to some problem we have to cancel your order."
+      p3: "You can order again here:"
+      here: "Here"
+      p4: "If you have any question feel free to contact us."
+      p5: "Best regards, fdf_33"
+    received:
+      p1: "Thank you for your recent order at fdf_33"
+      p2: "You can see your order at:"
+      here: "Here"
+      p3: "We will send you another email when we finish checking your order."
+      p4: "Best regards, fdf_33"
+    shipped:
+      p1: "Thank you for your recent order at fdf_33"
+      p2: "You can see your order at:"
+      here: "Here"
+      p3: "We have shipped your order to your address. The package is going to arrived at your home
+  30 or 60 minutes from now."
+      p4: "If you have any question feel free to contact us."
+      p5: "Best regards, fdf_33"

@@ -10,6 +10,16 @@ module CartOrder
     current_item
   end
 
+  def send_mail order
+    if order.status == t "cart_order.received"
+      OrderMailer.received(order).deliver_later
+    elsif order.status == t "cart_order.shipped"
+      OrderMailer.shipped(order).deliver_later
+    else
+      OrderMailer.canceled(order).deliver_later
+    end
+  end
+
   def total_price item
     item.price * item.quantity
   end

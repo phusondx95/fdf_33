@@ -35,34 +35,15 @@
                 </li>
               </ul>
             </li>
+            <li><%= link_to t("header.order"), orders_path, 
+              class: "glyphicon glyphicon-order" %></li>
             <li><%= link_to t("header.user"), users_path, 
               class: "glyphicon glyphicon-user" %></li>
           <% else %>
             <li><%= link_to t("header.suggest"), suggests_path, 
               class: "glyphicon glyphicon-folder-open" %></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <span class="glyphicon glyphicon-shopping-cart">
-                </span>
-                <%= t "header.cart" %>
-                <span class="badge">
-                  <%= t "header.0" %>
-                  </span>
-              </a>
-              <div class="dropdown-menu" style="width: 400px;">
-                <div class="panel panel-succes">
-                  <div class="panel-heading">
-                    <div class="row">
-                      <div class="col-md-3"><%= t "header.s1" %></div>
-                      <div class="col-md-3"><%= t "header.image" %></div>
-                      <div class="col-md-3"><%= t "header.name" %></div>
-                      <div class="col-md-3"><%= t "header.price" %></div>
-                    </div>
-                  </div>
-                  <div class="panel-body"></div>
-                  <div class="panel-footer"></div>
-                </div>
-              </div>
+              <%= link_to t("header.cart"), cart_path(@cart), class:"glyphicon glyphicon-shopping-cart" %>
             </li>
           <% end %>
           <li class="dropdown">
