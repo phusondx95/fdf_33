@@ -185,3 +185,31 @@ en:
       not: "Not approved"
       are: "Are you sure delele this suggest?"
       delete: "Delete"
+  cart_oder:
+    not_logged_in: "Not logged in!"
+    cart_empty: "Cart empty!"
+  carts_controller:
+    deletes: "Cart deleted success!"
+    notfound: "Not found cart!"
+  line_items_controller:
+    creates: "Item created success!"
+    createf: "Create fail item!"
+    updates: "Item updated success!"
+    updatef: "Update fail item!"
+    deletes: "Item deleted success!"
+    deletef: "Item remove fail!"
+    notfoundp: "Not found product!"
+    notfoundi: "Not found item!"
+  carts:
+    show:
+      title: "Your cart"
+    item_list:
+      pro: "Product"
+      price: "Price"
+      quantity: "Quantity"
+      sub: "Subtotal"
+      are: "Are you sure remove this item?"
+      remove: "Remove"
+      continue: "Continue Shopping"
+      totalc: "Total "
+      checkout: "Checkout"

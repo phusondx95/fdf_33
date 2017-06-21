@@ -6,13 +6,20 @@
         <div class="panel panel-info">
           <div class="panel-heading"><%= link_to product.title %></div> 
           <div class="panel-body">
-            <img src="" alt="">
+            <%= image_tag product.image_url, alt: "" %>
           </div>
           <div class="panel-heading"><%= number_to_currency product.price, 
             unit: "VNĐ", separator: ".", delimiter: ",", precision: 0,
             format: "%n %u" %>
-            <%= link_to "#", class: "btn btn-danger btn-xs" do %>
-              <span class="addcart"><%= t ".button" %></span>
+            <% if logged_in? %>
+              <%= link_to line_items_path(product_id: product.id), method: :post,
+                class: "btn btn-danger btn-xs" do %>
+                <span class="addcart"><%= t ".button" %></span>
+              <% end %>
+            <% else %>
+              <%= link_to login_path, class: "btn btn-danger btn-xs" do %>
+                <span class="addcart"><%= t ".button" %></span>
+              <% end %>
             <% end %>
           </div>  
           <div class="rating">
