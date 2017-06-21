@@ -7,10 +7,10 @@
           class: "glyphicon glyphicon-home" %></li>
         <li><%= link_to t("static-pages.news.news"), "#", class: "glyphicon glyphicon-new" %>
           </li>
+        <li><%= link_to t("static-pages.products.products"), products_path, 
+          class: "glyphicon glyphicon-modal-window" %></li>
         <% if logged_in? %>
           <% if current_user.is_admin %>
-            <li><%= link_to t("static-pages.products.products"), "#", 
-              class: "glyphicon glyphicon-modal-window" %></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <span class="glyphicon glyphicon-categories"></span>
@@ -78,8 +78,6 @@
             </ul>
           </li>
           <% else %>
-          <li><%= link_to t("static-pages.products.products"), products_path, 
-            class: "glyphicon glyphicon-modal-window" %></li>
           <li><%= link_to t(".login"), login_path, class: "glyphicon glyphicon-user" %></li>
           <li><%= link_to t("signup.signup"), signup_path, class: "signup", 
             class: "glyphicon glyphicon-user" %></li>
