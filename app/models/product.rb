@@ -5,8 +5,16 @@ class Product < ApplicationRecord
   validates :title, uniqueness: true, length: {maximum: Settings.max_title}
   validates :description, length: {maximum: Settings.max_description}
   validates :price, numericality: {greater_than_or_equal_to: Settings.min_price}
-  validates :image_url, format: {
-    with: %r{\.(gif|jpg|png)\z}i,
-    message: I18n.t("products.image")
-  }
+  mount_uploader :image_url, ImageUploader
+  validate  :image_size
+
+  scope :order_by_id, -> {order(id: :desc)}
+
+  private
+
+  def image_size
+    if image_url.size > 5.megabytes
+      errors.add :image_url, t("products.should")
+    end
+  end
 end

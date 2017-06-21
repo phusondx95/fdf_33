@@ -73,6 +73,9 @@ en:
     error_suggests_messages:
       theform: "The form contains"
       errors: "error"
+    error_products_messages:
+      theform: "The form contains"
+      errors: "error"
   users_controller:
     welcome: "Welcome to Food and Drinks Page!"
     not_found: "Not found user."
@@ -101,11 +104,41 @@ en:
     create: "Create sub category"
     suggest: "Manager request"
   products:
+    should: "Should be less than 5MB"
     index:
       title: "Products"
+      pro: "List products"
+      create: "Create new products"
+      product: "Product"
+      price: "Price"
+      func: "Function"
+      are: "Are you sure delete this product?"
+      edit: "Edit"
+      del: "Delete"
     products:
       button: "Add Cart"
       title: "Products"
+    edit: 
+      edit: "Update products"
+      image: "image/jpeg,image/gif,image/png"
+      img: "Image"
+      sub: "Sub Category"
+      choose: "Choose sub category"
+      save: "Save product"
+    new: 
+      create: "Create product"
+      image: "image/jpeg,image/gif,image/png"
+      img: "Image"
+      sub: "Sub Category"
+      choose: "Choose sub category"
+  products_controller:
+    creates: "Product created success!"
+    createf: "Create fail product!"
+    updates: "Product updated success!"
+    updatef: "Update fail product!"
+    deletes: "Product deleted success!"
+    deletef: "Delete fail product!"
+    notfound: "Not found product!"
   categories:
     new:
       title: "Create sub category"

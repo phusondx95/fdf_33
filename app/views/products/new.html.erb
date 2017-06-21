@@ -1,0 +1,33 @@
+<% provide :title, t(".create") %>
+
+<h1><%= t ".create" %></h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for @product do |f| %>
+      <%= render "shared/error_products_messages" %>
+
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "form-control" %>
+
+      <%= f.label :description %>
+      <%= f.text_area :description, class: "form-control", 
+        accept: t(".image") %>
+
+      <%= f.label :image_url, t(".img") %>
+      <%= f.file_field :image_url, class: "form-control" %>
+
+      <%= f.label :price %>
+      <%= f.text_field :price, class: "form-control" %>
+
+      <%= f.label :category_id, t(".sub") %>
+      <%= f.collection_select :category_id, 
+        Category.sub_category,:id, :name, prompt: t(".choose") %>
+
+      <%= f.submit t(".create"), class: "btn btn-primary" %>
+      <br>
+      <br>
+      <br>
+    <% end %>
+  </div>
+</div>
