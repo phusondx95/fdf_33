@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 20170620015754) do
   end
 
   create_table "line_items", force: :cascade do |t|
-    t.integer "quantity"
-    t.decimal "price"
+    t.integer "quantity", default: 1
+    t.decimal "price", default: "0.0"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "order_id"

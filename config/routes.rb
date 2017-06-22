@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   resources :products
   resources :categories
   resources :suggests
+  resources :carts
+  resources :line_items
+  resources :orders
 end

@@ -1,0 +1,5 @@
+<% provide :title, t(".title") %>
+
+<h1 class="text-center"><%= t ".title" %></h1>
+
+<%= render partial: "item_list", locals: {items: @cart.line_items} %>
