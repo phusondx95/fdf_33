@@ -11,9 +11,9 @@ module CartOrder
   end
 
   def send_mail order
-    if order.status == "received"
+    if order.status == t "cart_order.received"
       OrderMailer.received(order).deliver_later
-    elsif order.status == "shipped"
+    elsif order.status == t "cart_order.shipped"
       OrderMailer.shipped(order).deliver_later
     else
       OrderMailer.canceled(order).deliver_later

@@ -191,6 +191,8 @@ en:
   cart_oder:
     not_logged_in: "Not logged in!"
     cart_empty: "Cart empty!"
+    received: "received"
+    shipped: "shipped"
   carts_controller:
     deletes: "Cart deleted success!"
     notfound: "Not found cart!"
@@ -230,8 +232,9 @@ en:
       create: "Create order"
       update: "Update order"
       select: "Select pay type"
-    order_list_index:
+    index:
       title: "Orders"
+    order_list_index:
       list: "List order"
       name: "Name"
       detail: "Order detail"
@@ -242,3 +245,10 @@ en:
       are: "Are you sure delete this order?"
     new:
       fillin: "Fill in the information"
+    show:
+      title: "Detail order"
+      pro: "Product"
+      price: "Price"
+      quantity: "Quantity"
+      sub: "Subtotal"
+      total: "Total"
