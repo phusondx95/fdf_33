@@ -1,0 +1,55 @@
+<h2 class="title"><%= t ".title" %></h2>
+
+<div class="container">
+  <table id="cart" class="table table-hover table-condensed">
+    <thead>
+      <tr>
+        <th class="th1"><%= t ".create" %></th>
+        <th class="th2"><%= t ".total" %></th>
+        <th class="th2"><%= t ".stt" %></th>
+        <th class="th3"><%= t ".detail" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% orders.newest.each do |order| %>
+        <tr>
+          <td data-th="order">
+          <div class="row">
+            <div class="col-sm-10">
+            <h4 class="nomargin"><%= order.created_at %></h4>
+            </div>
+          </div>
+          </td>
+          <td data-th="order">
+          <div class="row">
+            <div class="col-sm-10">
+            <h4 class="nomargin"><%= number_to_currency total_cost(order),
+              unit: "VNĐ", separator: ".", delimiter: ",",
+              precision: 0, format: "%n %u" %></h4>
+            </div>
+          </div>
+          </td>
+          <td data-th="order">
+          <div class="row">
+            <div class="col-sm-10">
+            <h4 class="nomargin"><%= order.status %></h4>
+            </div>
+          </div>
+          </td>
+          </td>
+          <td data-th="order">
+          <div class="row">
+            <div class="col-sm-10">
+            <h4 class="nomargin">
+              <%= link_to t(".detail"), order_path(order) %></h4>
+            </div>
+          </div>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+    <tfoot>
+      <%= will_paginate orders %>
+    </tfoot>
+  </table>
+</div>

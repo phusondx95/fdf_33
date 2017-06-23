@@ -39,6 +39,10 @@ module CartOrder
     cost
   end
 
+  def total_price_cart line_items 
+    line_items.to_a.sum {|item| item.total_price}
+  end
+
   private
 
   def set_cart

@@ -8,4 +8,11 @@
       </h1>
     </section>
   </aside>
+
+  <% if current_user == @user %>
+  <% unless current_user.is_admin %>
+    <%= render partial: "orders/order_list_user", 
+      locals: {orders: @user.orders.paginate(page: params[:page], 
+      :per_page Settings.his_cart_limit)} %>
+  <% end %>
 </div>

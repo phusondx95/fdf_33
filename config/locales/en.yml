@@ -253,6 +253,12 @@ en:
       quantity: "Quantity"
       sub: "Subtotal"
       total: "Total"
+    order_list_user:
+      title: "Your history order"
+      create: "Created at"
+      total: "Total cost"
+      stt: "Status"
+      detail: "Detail cart"
   order_mailer:
     received: "Mail received"
     shipped: "Mail shipped"

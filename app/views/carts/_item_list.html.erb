@@ -61,7 +61,10 @@
         </td>
         <td colspan="2" class="hidden-xs"></td>
         <td class="hidden-xs text-center">
-          <strong><%= t ".totalc" %></strong>
+          <strong><%= t ".totalc" %> 
+          <%= number_to_currency total_price_cart(@cart.line_items),
+            unit: "VNĐ", separator: ".", 
+            delimiter: ",", precision: 0, format: "%n %u" %></strong>
         </td>
         <td>
           <%= link_to new_order_path, class: "btn btn-success btn-block" do %>
